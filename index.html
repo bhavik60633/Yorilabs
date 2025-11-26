@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youri Labs | AI Agents for Business & Personal Brand Growth</title>
+    <meta name="description" content="Build AI agents to grow your business and personal brand. Increase visibility, trust, and income streams with Youri Labs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAFAFA; /* Very light gray background */
+            color: #0f172a;
+        }
+        
+        /* Custom Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+
+        /* Subtle Grid Pattern for Hero */
+        .hero-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Card Hover Effects */
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #818cf8;
+        }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        /* Floating Elements Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 8s ease-in-out infinite 1s;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-500/30">
+                        Y
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight text-slate-900">Youri<span class="text-indigo-600">Labs</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#business" class="text-slate-600 hover:text-indigo-600 font-medium transition">For Business</a>
+                    <a href="#personal" class="text-slate-600 hover:text-indigo-600 font-medium transition">Personal Brand</a>
+                    <a href="#solutions" class="text-slate-600 hover:text-indigo-600 font-medium transition">Solutions</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-slate-900 text-white font-semibold hover:bg-slate-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Book a Demo
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-white shadow-2xl transform translate-x-full md:hidden z-50 flex flex-col p-6">
+            <div class="flex justify-end mb-8">
+                <button id="close-menu-btn" class="text-slate-500">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <a href="#business" class="text-lg font-medium text-slate-800" onclick="toggleMenu()">For Business</a>
+                <a href="#personal" class="text-lg font-medium text-slate-800" onclick="toggleMenu()">Personal Brand</a>
+                <a href="#solutions" class="text-lg font-medium text-slate-800" onclick="toggleMenu()">Solutions</a>
+                <a href="#contact" class="px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold text-center" onclick="toggleMenu()">Book a Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 hero-pattern opacity-50 -z-10"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-indigo-100 rounded-full blur-[100px] opacity-60 -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-100 rounded-full blur-[100px] opacity-60 -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-semibold text-sm mb-8 animate-float">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                    </span>
+                    The Future of Growth is Agentic
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-tight">
+                    Scale Your <span class="text-gradient">Business</span> & <br class="hidden md:block" />
+                    Amplify Your <span class="text-gradient">Influence</span>.
+                </h1>
+                
+                <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    We build intelligent AI Agents that automate business operations and supercharge personal brands. Unlock new income streams, global visibility, and 24/7 engagement.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-primary text-white font-bold text-lg hover:shadow-xl hover:shadow-indigo-500/20 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Start Building
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#solutions" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-slate-200 text-slate-700 font-bold text-lg hover:border-indigo-300 hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                        <i data-lucide="play-circle" class="w-5 h-5 text-indigo-600"></i>
+                        See How It Works
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Graphic / Dashboard Mockup -->
+            <div class="mt-20 relative mx-auto max-w-5xl animate-float-delayed">
+                <div class="rounded-2xl bg-white border border-slate-200 shadow-2xl overflow-hidden p-2 md:p-4">
+                    <div class="bg-slate-50 rounded-xl border border-slate-100 p-6 md:p-8 aspect-[16/9] md:aspect-[2/1] relative overflow-hidden">
+                        <!-- Abstract UI representation of Agents working -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full">
+                            <!-- Column 1: Ingest -->
+                            <div class="bg-white rounded-lg p-4 shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3 text-blue-600">
+                                    <i data-lucide="database" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-800">Knowledge Base</h3>
+                                <p class="text-sm text-slate-500 mt-2">Ingesting your content, products, and brand voice.</p>
+                            </div>
+                            
+                            <!-- Column 2: Process (The Agent) -->
+                            <div class="relative bg-gradient-primary rounded-xl p-4 shadow-lg text-white flex flex-col items-center justify-center text-center z-10 scale-105">
+                                <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+                                    <i data-lucide="bot" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <h3 class="font-bold text-lg">Youri AI Agent</h3>
+                                <p class="text-indigo-100 text-sm mt-2">Thinking, interacting, and converting 24/7.</p>
+                                <!-- Connection Lines -->
+                                <div class="hidden md:block absolute top-1/2 -left-8 w-8 h-0.5 border-t-2 border-dashed border-indigo-300"></div>
+                                <div class="hidden md:block absolute top-1/2 -right-8 w-8 h-0.5 border-t-2 border-dashed border-indigo-300"></div>
+                            </div>
+
+                            <!-- Column 3: Output -->
+                            <div class="bg-white rounded-lg p-4 shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-3 text-green-600">
+                                    <i data-lucide="trending-up" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-800">Growth</h3>
+                                <p class="text-sm text-slate-500 mt-2">Income generation, leads, and global reach.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-10 border-y border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-8">Powering Next-Gen Brands</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Placeholders for logos -->
+                <div class="flex items-center gap-2 text-xl font-bold text-slate-800"><i data-lucide="hexagon" class="fill-current"></i> TechFlow</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-slate-800"><i data-lucide="circle" class="fill-current"></i> Orbit</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-slate-800"><i data-lucide="triangle" class="fill-current"></i> Nexus</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-slate-800"><i data-lucide="square" class="fill-current"></i> Spherule</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-slate-800"><i data-lucide="diamond" class="fill-current"></i> Vertex</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section id="business" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-4">FOR BUSINESS</div>
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6">Automate Operations. <br>Scale Without Limits.</h2>
+                    <p class="text-lg text-slate-600 mb-8">
+                        Stop trading time for money. Our custom AI agents handle customer support, lead generation, and sales workflows so you can focus on strategy.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mt-1 mr-3">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <span class="text-slate-700"><strong>24/7 Customer Support:</strong> Never miss a query on WhatsApp, Instagram, or Web.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mt-1 mr-3">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <span class="text-slate-700"><strong>Smart Lead Qualification:</strong> Agents filter and book meetings for your sales team.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mt-1 mr-3">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <span class="text-slate-700"><strong>Data-Driven Insights:</strong> Auto-summarize conversations and extract intent.</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="text-indigo-600 font-bold hover:text-indigo-700 flex items-center gap-2 group">
+                        Build a Business Agent 
+                        <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-indigo-500 rounded-2xl transform rotate-3 opacity-20 blur-lg"></div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 relative z-10 border border-slate-100">
+                        <div class="flex items-center justify-between mb-6 pb-6 border-b border-slate-100">
+                            <div>
+                                <h4 class="font-bold text-lg">Sales Agent</h4>
+                                <p class="text-sm text-slate-500">Active on Website</p>
+                            </div>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded font-bold">ONLINE</span>
+                        </div>
+                        <div class="space-y-4">
+                            <!-- Chat Bubble Left -->
+                            <div class="flex gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-200 flex-shrink-0"></div>
+                                <div class="bg-slate-100 p-3 rounded-lg rounded-tl-none text-sm text-slate-600 max-w-[80%]">
+                                    Hi, do you offer enterprise pricing for 50+ users?
+                                </div>
+                            </div>
+                            <!-- Chat Bubble Right -->
+                            <div class="flex gap-3 flex-row-reverse">
+                                <div class="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="bot" class="w-4 h-4 text-white"></i>
+                                </div>
+                                <div class="bg-indigo-600 p-3 rounded-lg rounded-tr-none text-sm text-white max-w-[80%] shadow-md">
+                                    Yes! For 50+ users, we offer a dedicated plan with priority support. Would you like me to schedule a demo with our enterprise team?
+                                </div>
+                            </div>
+                            <!-- Chat Bubble Left -->
+                            <div class="flex gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-200 flex-shrink-0"></div>
+                                <div class="bg-slate-100 p-3 rounded-lg rounded-tl-none text-sm text-slate-600 max-w-[80%]">
+                                    That would be great. Does tomorrow at 2 PM work?
+                                </div>
+                            </div>
+                            <!-- Action -->
+                            <div class="flex justify-center pt-2">
+                                <div class="bg-slate-50 border border-slate-200 rounded px-3 py-1 text-xs text-slate-500 flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-3 h-3"></i> Agent booking meeting...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Brand Section -->
+    <section id="personal" class="py-24 bg-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute -left-20 top-40 w-64 h-64 bg-purple-100 rounded-full blur-[80px] opacity-60"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Visuals First on Mobile, but Second in DOM for logic, actually let's swap order visually via Flex -->
+                <div class="order-2 md:order-1 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+                            <div class="w-12 h-12 mx-auto bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-4">
+                                <i data-lucide="globe" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Global Presence</h3>
+                            <p class="text-xs text-slate-500 mt-2">Speak to audiences in 20+ languages instantly.</p>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center mt-8">
+                            <div class="w-12 h-12 mx-auto bg-pink-100 rounded-xl flex items-center justify-center text-pink-600 mb-4">
+                                <i data-lucide="dollar-sign" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Income Stream</h3>
+                            <p class="text-xs text-slate-500 mt-2">Monetize your expertise 24/7 without being there.</p>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center -mt-8">
+                            <div class="w-12 h-12 mx-auto bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-4">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Deep Trust</h3>
+                            <p class="text-xs text-slate-500 mt-2">Consistent, high-quality interaction builds loyalty.</p>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+                            <div class="w-12 h-12 mx-auto bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-4">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Visibility</h3>
+                            <p class="text-xs text-slate-500 mt-2">Be everywhere at once. Omnichannel scale.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2">
+                    <div class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-4">FOR PERSONAL BRANDS</div>
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6">Clone Your Expertise. <br>Monetize Your Sleep.</h2>
+                    <p class="text-lg text-slate-600 mb-8">
+                        You can't be everywhere, but your AI Agent can. We create a "Digital Twin" of you that engages followers, answers questions, and sells your courses or services around the clock.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center flex-shrink-0">
+                                <span class="font-bold text-purple-600">01</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Passive Income Generation</h4>
+                                <p class="text-slate-500 text-sm">Your agent can recommend products, sell consultations, or gate premium content.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center flex-shrink-0">
+                                <span class="font-bold text-purple-600">02</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Infinite Scalability</h4>
+                                <p class="text-slate-500 text-sm">Handle 1 conversation or 10,000 simultaneously without losing your personal tone.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center flex-shrink-0">
+                                <span class="font-bold text-purple-600">03</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Global Language Support</h4>
+                                <p class="text-slate-500 text-sm">Break language barriers. Your agent speaks fluent Spanish, French, Hindi, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#contact" class="text-purple-600 font-bold hover:text-purple-700 flex items-center gap-2 group">
+                            Create Your Digital Twin
+                            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / Solutions -->
+    <section id="solutions" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">From Chaos to <span class="text-indigo-400">Autopilot</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Our 3-step framework to revolutionize how you operate.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition duration-300">
+                    <div class="text-4xl font-bold text-slate-700 mb-4">01</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ingest & Learn</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        We connect your data sources (PDFs, Website, Notion, Past Chats). The AI learns your business logic or personal voice perfectly.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition duration-300">
+                    <div class="text-4xl font-bold text-slate-700 mb-4">02</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Architect Agents</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        We build custom workflows. Whether it's a "Sales Closer" for business or a "Fan Engagement Bot" for creators.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition duration-300">
+                    <div class="text-4xl font-bold text-slate-700 mb-4">03</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Deploy Everywhere</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Launch your agents on WhatsApp, Instagram, Telegram, and your Website simultaneously. Watch the growth happen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="bg-gradient-primary rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl overflow-hidden relative">
+                <!-- BG Shapes -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-black opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Scale?</h2>
+                <p class="text-indigo-100 text-lg mb-10 max-w-xl mx-auto">
+                    Join the top 1% of businesses and creators leveraging Agentic AI. Book a free strategy call to see what we can build for you.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="alert('Demo booking modal would open here!')" class="px-8 py-4 bg-white text-indigo-600 font-bold rounded-full hover:bg-indigo-50 transition shadow-lg">
+                        Book Your Free Demo
+                    </button>
+                    <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition">
+                        View Case Studies
+                    </button>
+                </div>
+                
+                <p class="mt-8 text-sm text-indigo-200 opacity-80">No commitment required. 100% tailored strategy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold shadow-lg">Y</div>
+                        <span class="font-bold text-xl text-slate-900">Youri<span class="text-indigo-600">Labs</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        Helping businesses and creators build the future with AI Agents. Automated growth, global reach, and passive income.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="#" class="hover:text-indigo-600 transition">Business Agents</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition">Personal Branding</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition">Integrations</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="#" class="hover:text-indigo-600 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="#" class="hover:text-indigo-600 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-indigo-600 transition">Terms of Service</a></li>
+                    </ul>
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="text-slate-400 hover:text-indigo-600 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-indigo-600 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-indigo-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-200 pt-8 text-center text-slate-500 text-sm">
+                &copy; 2025 Youri Labs. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            const isHidden = menu.classList.contains('translate-x-full');
+            if (isHidden) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>
